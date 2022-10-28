@@ -14,13 +14,13 @@
 *author*: **Ahmed E. F. R. Mohammed**
 
 
-* [Scripts](#Scripts)
+* [Package.json-scripts](#Package.json-scripts)
 * [Proper-use](#Proper-use)
 * [Endpoint](#Endpoint)
 * [Notice](#Notice)
 
 
-## Scripts
+## Package.json-scripts
 - ```npm install```: This is the first script to run in order to install all the dependencies and devDependencies needed for the project to function properly. 
 - ```npm run prettier```: To apply the prettier rules to the code base, in order to ensure consistency for how the code is displayed.
 
@@ -64,11 +64,11 @@ This will result in creating a resized image of the "fjor" image located in the 
 
 http://localhost:1987/api/v1/processimage?imageName=all&desiredWidth=600&desiredHeight=900
 
-In this case, the user have used the keyword "all" as entry for the "imageName" parameter. This will result in processing all the images located in the `assets/images/full` to be 600 pixels wide and 900 pixels height. They will all be saved to the `assets/images/thumb`
+In this case, the user have used the keyword `all` as entry for the `imageName` parameter. This will result in processing all the images located in the `assets/images/full` to be 600 pixels wide and 900 pixels height. They will all be saved to the `assets/images/thumb`
 
 
 ## Notice
-- Once the server starts running, and a call is made to the API using the proper formatting, as stated abovem, a logger file titled "loggerFile.txt" will be created under `assets/`, and will remain there even after the server is down. This file is designed to persist on desk for the lifetime of the API to continually store details of the functioning as well as usage of the API. If deleted by any change, once the server received a new API call, it will be re-created again. The previously stored data is gone nontheless, and this newly created logger fille will serve as a fresh start.
+- Once the server starts running, and a call is made to the API using the proper formatting, as stated abovem, a logger file titled `loggerFile.txt` will be created under `assets/`, and will remain there even after the server is down. This file is designed to persist on desk for the lifetime of the API to continually store details of the functioning as well as usage of the API. If deleted by any change, once the server received a new API call, it will be re-created again. The previously stored data is gone nontheless, and this newly created logger fille will serve as a fresh start.
 
-- If by any chance, you end up deleting either the full or thumb folder, you will need to recreate them manually. the same applies to the parent folder of "images" and "assets" respectively. Otherwise, the API will NOT function properly and breaks down. 
+- If by any chance, you end up deleting either the `full` or `thumb` folder, you will need to recreate them manually. the same applies to the parent folder of `images` and `assets` respectively. Otherwise, the API will NOT function properly and breaks down. 
 
