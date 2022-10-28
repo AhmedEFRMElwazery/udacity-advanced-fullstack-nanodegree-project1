@@ -56,7 +56,7 @@ In order for the API to function properly, three query parameters are needed:
 - _desiredWidth_: A positive number of pixels that you wish to have for the image width.
 - _desiredHeight_: A positive number of pixels that you wish to have for the image height.
 
-Here are a few examples of properly formatted URLs:
+**Here are a few examples of properly formatted URLs:**
 
 http://localhost:1987/api/v1/processimage?imageName=fjord&desiredWidth=900&desiredHeight=700
 
