@@ -16,7 +16,7 @@ const processImageWithSharp = async (
       .toFile(sharpInput.processed);
     return null;
   } catch {
-    return 'Server Error: The server could not process the image!';
+    return 'Error from the (processImageWithSharp) module: The server could not process the image!';
   }
 };
 

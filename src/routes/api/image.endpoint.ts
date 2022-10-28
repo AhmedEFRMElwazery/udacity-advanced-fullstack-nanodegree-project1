@@ -19,18 +19,17 @@ imageEndpoint.get(
       return;
     }
 
-    let err: null | string = '';
+    let outcome: null | string = '';
 
     //Creates the processed image with the desired dimensions (i.e. width and height)
     if (
       !(await CheckLocalImages.checkAvailabilityOfProcessedImage(req.query))
     ) {
-      err = await CreateProcessedImage.createAProcessedImage(req.query);
+      outcome = await CreateProcessedImage.createAProcessedImage(req.query);
     }
 
-    //Proper error handling...
-    if (err) {
-      res.send(err);
+    if (outcome) {
+      res.send(outcome);
       return;
     }
 
@@ -41,7 +40,9 @@ imageEndpoint.get(
     if (fpath) {
       res.sendFile(fpath);
     } else {
-      res.send('Server Error: something have gone wrong!');
+      res.send(
+        'Error from the (imageEndpoint) Endpoint: something have gone wrong!'
+      );
     }
   }
 );

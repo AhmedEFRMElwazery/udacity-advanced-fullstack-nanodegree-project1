@@ -100,6 +100,9 @@ class CheckLocalImages {
 
     try {
       await fsPromises.access(filePath);
+      console.log(
+        'A processed image of the same name and with similar dimensions was already created. No newly processed image was created! Caching the one already saved.'
+      );
       return true;
     } catch {
       return false;
