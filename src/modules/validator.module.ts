@@ -19,7 +19,7 @@ const validateUserInputs = async (
     const availableImageNames: string = (
       await CheckLocalImages.getAvailableOriginalImages()
     ).join(', ');
-    return `Please pass either "all" or a proper imageName in the "imageName" query parameter. The available imageNames currently availabe in the "full" folder are: ${availableImageNames}.`;
+    return `Please pass either "all" or another proper imageName in the "imageName" query parameter. The available imageNames currently availabe in the "full" folder are: ${availableImageNames}.`;
   }
 
   //Checks whether the user has provided values for the "desiredWidth" and "desiredHeight" parameters.

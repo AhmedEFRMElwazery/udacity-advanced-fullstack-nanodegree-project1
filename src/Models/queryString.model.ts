@@ -4,6 +4,7 @@ interface IQueryString {
   imageName?: string;
   desiredWidth?: string;
   desiredHeight?: string;
+  all?: boolean;
 }
 
 export default IQueryString;

@@ -26,7 +26,7 @@ describe('Testing Validator module: ', (): void => {
       desiredHeight: '300',
     });
     expect(res).toContain(
-      'Please pass either "all" or a proper imageName in the "imageName" query parameter.'
+      'Please pass either "all" or another proper imageName in the "imageName" query parameter.'
     );
   });
 

@@ -1,7 +1,8 @@
-import { promises as fsPromises } from 'fs';
+import { constants, promises as fsPromises } from 'fs';
 import path from 'path';
 //An interface for the query string parameters provided by the user
 import IQueryString from '../Models/queryString.model';
+import chalk from 'chalk';
 
 class CheckLocalImages {
   /**
@@ -17,7 +18,7 @@ class CheckLocalImages {
   );
 
   /**
-   * A method to retrieve the image names available in the original (full) folder.
+   * A method to retrieve all the images' names available in the original (full) folder.
    */
   static async getAvailableOriginalImages(): Promise<string[]> {
     let availableImages: string[] | PromiseLike<string[]>;
@@ -30,6 +31,30 @@ class CheckLocalImages {
       availableImages = [];
       return availableImages;
     }
+  }
+
+  /**
+   * A method to retrieve all the images' names available in the processed (thumb) folder.
+   */
+  static async getAvailableProcessedImages(
+    query: IQueryString
+  ): Promise<boolean> {
+    const availableImages: boolean[] | PromiseLike<boolean[]> = [];
+
+    const availableOriginalImages =
+      await CheckLocalImages.getAvailableOriginalImages();
+    for (let i = 0; i < availableOriginalImages.length; i++) {
+      const boolValue =
+        await CheckLocalImages.checkAvailabilityOfProcessedImage({
+          imageName: availableOriginalImages[i],
+          desiredWidth: query.desiredWidth,
+          desiredHeight: query.desiredHeight,
+          all: true,
+        });
+      await availableImages.push(boolValue);
+    }
+
+    return await availableImages.every((value) => value === true);
   }
 
   /**
@@ -99,10 +124,14 @@ class CheckLocalImages {
     );
 
     try {
-      await fsPromises.access(filePath);
-      console.log(
-        'A processed image of the same name and with similar dimensions was already created. No newly processed image was created! Caching the one already saved.'
-      );
+      await fsPromises.access(filePath, constants.R_OK);
+      if (!query.all) {
+        console.log(
+          chalk.bgRed.whiteBright(
+            'A processed image of the same name and with similar dimensions was already created. No newly processed image was created! Caching the one already saved.'
+          )
+        );
+      }
       return true;
     } catch {
       return false;

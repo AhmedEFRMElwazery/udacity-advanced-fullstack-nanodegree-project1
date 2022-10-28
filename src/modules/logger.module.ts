@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import { Request, Response } from 'express';
 import { promises as fsPromises } from 'fs';
 import path from 'path';
@@ -27,17 +28,21 @@ const middleware = (req: Request, res: Response, next: () => void): void => {
   const newTime = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
   //if the user provides no entries, then in this case it will be entered as "no entries"
   if (Object.keys(req.query).length === 0) {
-    const loggerMessage = `\nRequest type: ${req.method}, Visited URL: "${req.originalUrl}", User parameters: no entries, User IP address: ${req.ip}, Date: ${newDate}, Time: ${newTime}\n`;
+    const loggerMessage = chalk.bgMagenta.whiteBright(
+      `\nRequest type: ${req.method}, Visited URL: "${req.originalUrl}", User parameters: no entries, User IP address: ${req.ip}, Date: ${newDate}, Time: ${newTime}\n`
+    );
     console.log(loggerMessage);
     //write the details to assets/loggerFile.txt
     writeDataToLoggerFile(loggerMessage);
   } else {
-    const loggerMessage = `\nRequest type: ${req.method}, Visited URL: "${
-      req.originalUrl
-    }", User parameters: ${JSON.stringify(
-      //turing the query object into a string.
-      req.query
-    )}, User IP address: ${req.ip}, Date: ${newDate}, Time: ${newTime}\n`;
+    const loggerMessage = chalk.bgMagenta.whiteBright(
+      `\nRequest type: ${req.method}, Visited URL: "${
+        req.originalUrl
+      }", User parameters: ${JSON.stringify(
+        //turing the query object into a string.
+        req.query
+      )}, User IP address: ${req.ip}, Date: ${newDate}, Time: ${newTime}\n`
+    );
     console.log(loggerMessage);
     //write the details to assets/loggerFile.txt
     writeDataToLoggerFile(loggerMessage);
