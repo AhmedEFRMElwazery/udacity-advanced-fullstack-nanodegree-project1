@@ -1,4 +1,4 @@
-# Udacity-advanced-fullstack-nanodegree-project1 (API for Image Processing)
+# Udacity Advanced Fullstack Web Development Nanodegree - Project1 (API for Image Processing)
 
 
 [![Udacity's Logo](./assets/docs/udacityLogo.svg "Udacity's Logo")](https://www.udacity.com/)
