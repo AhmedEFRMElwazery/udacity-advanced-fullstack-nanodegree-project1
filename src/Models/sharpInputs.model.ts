@@ -1,10 +1,10 @@
-//an interface for the parameters to be used as input for the sharp package
+//An interface for the parameters to be used as input for the sharp package
 
-interface sharpInputs {
+interface ISharpInputs {
   original: string;
-  desired: string;
+  processed: string;
   width: number;
   height: number;
 }
 
-export default sharpInputs;
+export default ISharpInputs;

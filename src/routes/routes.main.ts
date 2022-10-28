@@ -1,13 +1,14 @@
 import express, { Router, Request, Response } from 'express';
-import imageAPI from './API/image';
+import path from 'path';
+import logger from '../modules/logger.module';
+import images from './api/image';
 
-const routesMainGateway: Router = express.Router();
+const routes: Router = express.Router();
 
-routesMainGateway.get('/', (req: Request, res: Response) => {
-  console.log('main routes has been called');
-  res.send('main routes has been called');
+routes.use('/v1/processimage', images);
+
+routes.get('/', logger, (req: Request, res: Response): void => {
+  res.sendFile(path.resolve('assets/pages/index.html'));
 });
 
-routesMainGateway.use('/imageProcessingAPI', imageAPI);
-
-export default routesMainGateway;
+export default routes;

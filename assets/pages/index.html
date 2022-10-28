@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing API | Guidlines</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            margin: 5%;
+            padding: 0;
+            font-family: Helvetica;
+        }
+
+        .header{
+            width: 100%;
+            height: 20%;
+            margin: 0 0.5rem;
+            border-radius: 25px;
+            box-shadow: 3px 5px 25px 1px black;
+        }
+
+        h1{
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h2{
+            padding: 2rem;
+            text-decoration: underline;
+        }
+
+        .subTitle{
+            text-align:center;
+        }
+
+        p{
+            padding: 1rem;
+        }
+
+        .main-section{
+            width: 100%;
+        }
+
+        li {
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the Image Processing API</h1>
+        <p class="subTitle">This webpage will serve as a guideline on how to use the Image Processing API</p>
+    </div>
+    <div class="main-section">
+        <div class="sub-section">
+            <h2>How to use:</h2>
+            <p>
+                You can use the Image Processing API by following these steps:
+                <ol>
+                    <li>Add the photo(s) that you want to resize in the <strong>assets/images/full</strong>folder</li>
+                    <li>Visit the following link: <strong>http//localhost:1987/api/v1/processimage</strong></li>
+                    <li>Add the following parameters after the URL:
+                        <ul>
+                            <li><strong>?imageName=</strong>[filename] -> replace "filename" with the name of the original image you added to the "full" folder, or you can write "all" to process all the original images in the "full" folder.</li>
+                            <li><strong>&desiredWidth=</strong>[number] -> replace "number" with the number of pixels you wish to have as your width.</li>
+                            <li><strong>&desiredHeight=</strong>[number] -> replace "number" with the number of pixels you wish to have as your height.</li>
+                        </ul>
+                    </li>
+                    <li>As an example, the final url should look like this: <strong>http//localhost:1987/api/v1/processimage?imageName=santamonica&desiredWidth=900&desiredHeight=700</strong> in the address bar in your browser.</li>
+                    <li>Press <strong>"Enter"</strong>.</li>
+                </ol>
+            </p>
+        </div>
+        <div class="sub-section">
+            <h2>What you will get:</h2>
+            <ul>
+            <li><p>
+                Processed image(s) with the desired width and height will be stored in <strong>assets/images/thumb</strong> folder.
+            </p></li>
+        <li><p>
+                For ease of reach and navigation, the processed image will be saved in the format of <strong>imageName_width_</strong>[pixels]<strong>_height_</strong>[pixels]<strong>.jpeg</strong>.
+            </p></li>
+        <li><p>
+                <strong>ONLY</strong> new processed image(s) with new dimensions (width and height) are the ones that will be created.                                               
+            </p></li>
+        <li><p>
+                If you enter resizing parameters that were previously used in an ealier processing, and the processed image is still available in the thumb folder, <strong>it will NOT be reprocessed, but rather load the already processed image</strong>.
+            </p></li>
+        <li><p>
+                If you enter <strong>"all"</strong> for the <strong>"imageName"</strong> parameter, <strong>all the photos in the "full" folder will be processed</strong> to match the values entered for the "desiredWidth" and "desiredHeight" parameters. <strong>The last image</strong> that is sorted alpha-numerically in the folder will be displayed.
+            </p></li>
+        <li><p>
+                A logger file named <strong>"loggerFile.txt"</strong> is created and stored in the <strong>"assets"</strong> folder. It saves all the API calls over its lifetime. Details such as date and time of the API call, parameters values entered by the user, remote ip address of the user, URLs, etc., is being stored. If by any chance it gets deleted, a new logger file (i.e. loggerFile.txt) is created automatically once the server is up and running and a call has been made to the API.
+            </p></li>
+        </ul>
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>

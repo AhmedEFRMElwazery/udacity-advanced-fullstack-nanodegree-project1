@@ -1,9 +1,9 @@
-//an interface for the query string to be entered by the API user
+//An interface for the query string to be entered by the API user
 
-interface queryString {
+interface IQueryString {
   imageName?: string;
   desiredWidth?: string;
   desiredHeight?: string;
 }
 
-export default queryString;
+export default IQueryString;
