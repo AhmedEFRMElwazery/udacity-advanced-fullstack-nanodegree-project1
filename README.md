@@ -35,7 +35,7 @@
 - ```npm run start```: will start the development server using nodemon.
 
 ## Proper-use
-Once your start the server, it will be listening on port 1987. Once you visit the 'http://localhost:1987/', you will be greeting with a landing page that serves as a guideline on how to use the API and its features, as demonstrated below:
+Once your start the server, it will be listening on port 1987. Once you visit the 'http://localhost:1987/', you will be greeted with a landing page that serves as a guideline on how to use the API and its features, as demonstrated below:
 
 ![Landing Page](./assets/docs/API-landingPage.png "The Image Processing API landing page")
 
