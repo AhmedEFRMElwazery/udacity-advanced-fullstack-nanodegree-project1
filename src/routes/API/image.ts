@@ -7,7 +7,7 @@ import validateUserInputs from '../../modules/validator.module';
 const images: Router = express.Router();
 
 images.get('/', logger, async (req: Request, res: Response): Promise<void> => {
-  // Checks whether the user request is a valid one
+  //Checks whether the user request is a valid one
   const validationOutcome: null | string = await validateUserInputs(req.query);
   if (validationOutcome) {
     res.send(validationOutcome);
@@ -15,18 +15,18 @@ images.get('/', logger, async (req: Request, res: Response): Promise<void> => {
 
   let err: null | string = '';
 
-  // Creates the processed image with the desired dimensions
+  //Creates the processed image with the desired dimensions (i.e. width and height)
   if (!(await CheckLocalImages.checkAvailabilityOfProcessedImage(req.query))) {
     err = await CreateProcessedImage.createAProcessedImage(req.query);
   }
 
-  // Handle image processing err
+  //Proper error handling...
   if (err) {
     res.send(err);
     return;
   }
 
-  // Retrieve appropriate image path and display image
+  //Gets the proper path for the image and displays it on screen.
   const fpath: null | string = await CheckLocalImages.determineImagePath(
     req.query
   );

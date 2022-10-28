@@ -24,7 +24,7 @@ describe('Testing processImageWithSharp module: ', (): void => {
     });
     expect(res).toBeNull();
   });
-  it("Checks if the image was created by the 'processImageWithSharp' module, and should return true it exists", async (): Promise<void> => {
+  it("Checks if the image was created by the 'processImageWithSharp' module, and should return true if it exists", async (): Promise<void> => {
     const res = await checkLocalImages.checkAvailabilityOfProcessedImage({
       imageName: 'fjord',
       desiredWidth: '250',

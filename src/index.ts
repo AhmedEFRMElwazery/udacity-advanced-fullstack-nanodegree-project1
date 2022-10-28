@@ -22,8 +22,9 @@ app.use('/api', routes);
 
 // Start the server listening on the previously stipulated port
 app.listen(port, async (): Promise<void> => {
-  const url = `http://localhost:${port}`;
-  console.log(`Now, you can start browsing the project on ${url}`);
+  console.log(
+    `Now, you can start browsing the project on http://localhost:${port}`
+  );
 });
 
 export default app;

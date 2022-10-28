@@ -58,7 +58,7 @@ class CheckLocalImages {
       );
     }
 
-    //Checks if the file exist
+    //Checks if the file exists
     try {
       await fsPromises.access(filePath);
       return filePath;
