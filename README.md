@@ -46,7 +46,7 @@ http://localhost:1987/api/v1/processimage
 
 In order for the API to function properly, three query parameters are needed:
 - _imageName_: Available filenames are:
-  - These could be one of the image names located in the `assets/images/full`, such as:
+  - These could be one of the images' names located in the `assets/images/full`, such as:
     - encenadaport
     - fjord
     - icelandwaterfall
