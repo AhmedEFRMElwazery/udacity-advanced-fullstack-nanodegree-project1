@@ -72,3 +72,6 @@ In this case, the user have used the keyword `all` as entry for the `imageName` 
 
 - If by any chance, you end up deleting either the `full` or `thumb` folder, you will need to recreate them manually. the same applies to the parent folder of `images` and `assets` respectively. Otherwise, the API will NOT function properly and breaks down. 
 
+- I have added a `.gitkeep` file to the `assets/images/thumb` in order to allow github to see it and upload it...The `.gitkeep` file serves no other purpose, but to make the folder visible to github and successfully upload it, so the project starts working without any issues that could arise from the abscence of the `thumb` folder.
+
+
