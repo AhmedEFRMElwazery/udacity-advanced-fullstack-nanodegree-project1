@@ -16,6 +16,7 @@ imageEndpoint.get(
     );
     if (validationOutcome) {
       res.send(validationOutcome);
+      return;
     }
 
     let err: null | string = '';
