@@ -17,6 +17,8 @@
 * [Package.json-scripts](#Package.json-scripts)
 * [Proper-use](#Proper-use)
 * [Endpoint](#Endpoint)
+* [Notifications](#Notifications)
+* [Error-Handling](#Error-Handling)
 * [Notice](#Notice)
 
 
@@ -64,7 +66,61 @@ This will result in creating a resized image of the "fjor" image located in the 
 
 http://localhost:1987/api/v1/processimage?imageName=all&desiredWidth=600&desiredHeight=900
 
-In this case, the user have used the keyword `all` as entry for the `imageName` parameter. This will result in processing all the images located in the `assets/images/full` to be 600 pixels wide and 900 pixels height. They will all be saved to the `assets/images/thumb`
+In this case, the user have used the keyword `all` as entry for the `imageName` parameter. This will result in processing all the images located in the `assets/images/full` to be 600 pixels wide and 900 pixels height. They will all be saved to the `assets/images/thumb`.
+
+## Notifications
+
+A number of colored CLI notification were made for the purose of ease-of-use from a system admin perspective, here are they:
+
+- Magenta notification is displayed once the API receives a call, with details about the nature of the API call, as displayed below.
+
+- Green notification is displayed if the creation of a processed image, or a groud of processed images, was successful.
+
+- Red notification is displayed if the user tries to make a new processed image from the same original with the same dimensions (i.e. width and height).
+
+- Red notification is displayed if the tries to process all the images in the `full` folder again with the same dimensions (i.e. width and height).
+
+## Error-Handling
+
+### missing imageName parameter
+
+**Example URL:** http://localhost:1987/api/v1/processimage?desiredWidth=900&desiredHeight=700
+
+**Outcome:** 
+
+### missing desiredWidth parameter
+
+**Example URL:** http://localhost:1987/api/v1/processimage?imageName=fjord&desiredHeight=700
+
+**Outcome:** 
+
+### missing desiredHeight parameter
+
+**Example URL:** http://localhost:1987/api/v1/processimage?imageName=fjord&desiredWidth=900
+
+**Outcome:** 
+
+### using an image name that does NOT exist in the `full` folder
+
+**Example URL:** http://localhost:1987/api/v1/processimage?imageName=jarvis&desiredWidth=900&desiredHeight=700
+
+**Outcome:** 
+
+### trying to re-process and already processed image with the same dimensions
+
+**Example URL (run it twice):** http://localhost:1987/api/v1/processimage?imageName=fjord&desiredWidth=900&desiredHeight=700
+
+**Outcome (shown in browser):** A cached version, that was loaded from the `thumb` folder, is displayed  
+
+**Outcome (shown in CLI):** 
+
+### trying to re-process all the images in the `full` folder with the same dimensions
+
+**Example URL (run it twice):** http://localhost:1987/api/v1/processimage?imageName=all&desiredWidth=900&desiredHeight=700
+
+**Outcome (shown in browser):** A cached version, that was loaded from the `thumb` folder, of the last alpha-numerically listed image is displayed
+
+**Outcome (shown in CLI):** 
 
 
 ## Notice
@@ -73,5 +129,15 @@ In this case, the user have used the keyword `all` as entry for the `imageName` 
 - If by any chance, you end up deleting either the `full` or `thumb` folder, you will need to recreate them manually. the same applies to the parent folder of `images` and `assets` respectively. Otherwise, the API will NOT function properly and breaks down. **This functionality is intential**, to make sure that the user understands where to put the (original) photos on which he wants to conduct the resizing, and where he will get the new (processed) ones after conducting the processing operation on them. 
 
 - I have added a `.gitkeep` file to the `assets/images/thumb` in order to allow github to see it and upload it...The `.gitkeep` file serves no other purpose, but to make the folder visible to github and successfully upload it, so the project starts working without any issues that could arise from the abscence of the `thumb` folder.
+
+- Once the testing in jasmine is run, **three (confirm this)** messages will appear, one highlighted in green and two in red. They are NOT erorrs! These are just confirmation that the testing is successful, as will be demonstrated below:
+
+  - Green message: A test was made to testing the functionality of the "createProcessedImage" module, which creates a processed image. The green message is a confirmation that this image is indeed created. It runs automatically once the module is summons and its main function is called.
+
+  - Red messages:
+    - A test was made to test the functionality of the 
+
+    - A test was made to test the functionality of the 
+
 
 

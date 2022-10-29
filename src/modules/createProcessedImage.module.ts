@@ -31,7 +31,9 @@ class CreateProcessedImage extends CheckLocalImages {
       `${query.imageName}_width_${query.desiredWidth}_height_${query.desiredHeight}.jpg`
     );
 
-    console.log(chalk.bgGreenBright.whiteBright('Created A Processed Image...'));
+    console.log(
+      chalk.bgGreenBright.whiteBright('Created A Processed Image...')
+    );
 
     //Checks whether the user input value for the "imageName" is all, so it processes all the images in the "full" folder
     if (query.imageName.toLowerCase() === 'all') {

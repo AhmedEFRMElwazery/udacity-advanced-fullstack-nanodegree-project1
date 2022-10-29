@@ -33,6 +33,17 @@ class CheckLocalImages {
     }
   }
 
+  static async checkAvailabilityOfThumbFolder() {
+    try {
+      await fsPromises.access(
+        CheckLocalImages.afterProcessingPath,
+        constants.R_OK | constants.W_OK
+      );
+    } catch {
+      await fsPromises.mkdir(CheckLocalImages.afterProcessingPath);
+    }
+  }
+
   /**
    * A method to retrieve all the images' names available in the processed (thumb) folder.
    */

@@ -20,6 +20,8 @@ imageEndpoint.get(
       return;
     }
 
+    CheckLocalImages.checkAvailabilityOfThumbFolder();
+
     let outcome: null | string = '';
 
     //Creates the processed image with the desired dimensions (i.e. width and height),
@@ -30,7 +32,7 @@ imageEndpoint.get(
       } else {
         console.log(
           chalk.bgRed.whiteBright(
-            'A number of processed images with similar dimensions were already created. Thus, No newly processed images were created! Caching the last alpha-numerically listed image that was already saved.'
+            "All the images in the 'full' directory have already been processed with similar dimensions. Thus, No newly processed images were created! Caching the last alpha-numerically listed image in the 'thumb'."
           )
         );
       }

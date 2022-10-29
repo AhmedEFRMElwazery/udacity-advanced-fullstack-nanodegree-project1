@@ -19,7 +19,7 @@ const validateUserInputs = async (
     const availableImageNames: string = (
       await CheckLocalImages.getAvailableOriginalImages()
     ).join(', ');
-    return `Please pass either "all" or another proper imageName in the "imageName" query parameter. The available imageNames currently availabe in the "full" folder are: ${availableImageNames}.`;
+    return `Please pass either 'all' or another proper imageName in the 'imageName' query parameter. The available imageNames currently availabe in the 'full' folder are: ${availableImageNames}.`;
   }
 
   //Checks whether the user has provided values for the "desiredWidth" and "desiredHeight" parameters.
@@ -30,13 +30,13 @@ const validateUserInputs = async (
   // Checks whether the user has enterd a valid value for the "desiredWidth" parameter.
   const widthValue: number = parseInt(query.desiredWidth || '');
   if (Number.isNaN(widthValue) || widthValue < 1) {
-    return "Please add a positive value for the number of pixels for the 'width' query parameter.";
+    return `Please add a positive value for the number of pixels for the 'desiredWidth' query parameter.`;
   }
 
   // Checks whether the user has enterd a valid value for the "desiredHeight" parameter.
   const heightValue: number = parseInt(query.desiredHeight || '');
   if (Number.isNaN(heightValue) || heightValue < 1) {
-    return "Please add a positive value for the number of pixels for the 'height' query parameter.";
+    return `Please add a positive value for the number of pixels for the 'desiredHeight' query parameter.`;
   }
 
   return null;
