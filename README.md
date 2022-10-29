@@ -60,7 +60,7 @@
 
 - **```npm run test```**: will run the aforementioned "build" and "jasmine" commands consecutively.
 
-**Screenshot - the result of running `test` script": PLEASE NOTE that the highlighted text in magenta, green and red is NOT an error message, but rather a notification. This is further explain in the [Notifications](#Notifications) section**
+**Screenshot - the result of running `test` script": PLEASE NOTE that the highlighted segments appearing in magenta, green and red are NOT error messages. They are colored notifications. This is further explain in BOTH the [Notifications](#Notifications) and the [Notice](#Notice) sections**
 
 ![outcome of running test script](./assets/docs/test-script-running-result1.png "outcome of running test script")
 
