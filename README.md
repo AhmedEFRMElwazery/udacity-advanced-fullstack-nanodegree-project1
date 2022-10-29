@@ -85,7 +85,7 @@ Once your start the server, it will be listening on port 1987. Once you visit th
 http://localhost:1987/api/v1/processimage
 
 In order for the API to function properly, three query parameters are needed:
-- _imageName_: Available filenames are:
+- **_imageName_**: Available filenames are:
   - These could be one of the images' names located in the `assets/images/full`, such as:
     - encenadaport
     - fjord
@@ -93,8 +93,8 @@ In order for the API to function properly, three query parameters are needed:
     - palmtunnel
     - santamonica
   - Or you can use the keyword `all`, and in this case, all the images located in the `assets/images/full` will be processed at once.   
-- _desiredWidth_: A positive number of pixels that you wish to have for the image width.
-- _desiredHeight_: A positive number of pixels that you wish to have for the image height.
+- **_desiredWidth_**: A positive number of pixels that you wish to have for the image width.
+- **_desiredHeight_**: A positive number of pixels that you wish to have for the image height.
 
 Here are a few examples of properly formatted URLs:
 
