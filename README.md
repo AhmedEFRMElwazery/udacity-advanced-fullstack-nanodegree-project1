@@ -110,7 +110,7 @@ In this case, the user have used the keyword `all` as entry for the `imageName` 
 ## Notifications
 ----------------
 
-A number of colored CLI notification were made for **the purpose of ease-of-use from a system admin perspective**, here is an overview of how they all look, with further explaination for each of them afterwards:
+A number of **colored CLI notifications** were made for **the purpose of ease-of-use from a system admin perspective**, here is an overview of how they all look, with further explaination for each of them afterwards:
 
 ![overview of all notificaions coloration](./assets/docs/all-notification-api-call.PNG "overview of all notificaions coloration")
 
