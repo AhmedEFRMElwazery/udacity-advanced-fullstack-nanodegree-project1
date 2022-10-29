@@ -1,0 +1,12 @@
+
+Request type: GET, Visited URL: "/", User parameters: no entries, User IP address: ::ffff:127.0.0.1, Date: 10/29/2022, Time: 19:47:9
+
+Request type: GET, Visited URL: "/api", User parameters: no entries, User IP address: ::ffff:127.0.0.1, Date: 10/29/2022, Time: 19:47:9
+
+Request type: GET, Visited URL: "/api/v1/processimage?imageName=santamonica&desiredWidth=900&desiredHeight=700", User parameters: {"imageName":"santamonica","desiredWidth":"900","desiredHeight":"700"}, User IP address: ::ffff:127.0.0.1, Date: 10/29/2022, Time: 19:47:9
+
+Request type: GET, Visited URL: "/", User parameters: no entries, User IP address: ::ffff:127.0.0.1, Date: 10/29/2022, Time: 19:47:38
+
+Request type: GET, Visited URL: "/api", User parameters: no entries, User IP address: ::ffff:127.0.0.1, Date: 10/29/2022, Time: 19:47:38
+
+Request type: GET, Visited URL: "/api/v1/processimage?imageName=santamonica&desiredWidth=900&desiredHeight=700", User parameters: {"imageName":"santamonica","desiredWidth":"900","desiredHeight":"700"}, User IP address: ::ffff:127.0.0.1, Date: 10/29/2022, Time: 19:47:38

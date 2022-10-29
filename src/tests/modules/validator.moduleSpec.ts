@@ -26,7 +26,7 @@ describe('Testing Validator module: ', (): void => {
       desiredHeight: '300',
     });
     expect(res).toContain(
-      'Please pass either \'all\' or another proper imageName in the \'imageName\' query parameter.'
+      "Please pass either 'all' or another proper imageName in the 'imageName' query parameter."
     );
   });
 
@@ -37,7 +37,7 @@ describe('Testing Validator module: ', (): void => {
       desiredHeight: '300',
     });
     expect(res).toContain(
-      'Please add a positive value for the number of pixels for the \'desiredWidth\' query parameter.'
+      "Please add a positive value for the number of pixels for the 'desiredWidth' query parameter."
     );
   });
 });
