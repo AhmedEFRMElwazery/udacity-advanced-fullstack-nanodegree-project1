@@ -1,4 +1,4 @@
-# udacity-advanced-fullstack-nanodegree-project1 (API for Image Processing)
+# Udacity's Advanced Fullstack Web Development Nanodegree - Project1 (API for Image Processing)
 
 
 [![Udacity's Logo](./assets/docs/udacityLogo.svg "Udacity's Logo")](https://www.udacity.com/)
@@ -74,7 +74,6 @@
 
 -------------
 ## Proper-use
--------------
 Once your start the server, it will be listening on port 1987. Once you visit the 'http://localhost:1987/', you will be greeting with a landing page that serves as a guideline on how to use the API and its features, as demonstrated below:
 
 ![Landing Page](./assets/docs/API-landingPage.png "The Image Processing API landing page")
@@ -87,7 +86,7 @@ http://localhost:1987/api/v1/processimage
 
 In order for the API to function properly, three query parameters are needed:
 - _imageName_: Available filenames are:
-  - These could be one of the image names located in the `assets/images/full`, such as:
+  - These could be one of the images' names located in the `assets/images/full`, such as:
     - encenadaport
     - fjord
     - icelandwaterfall
@@ -97,7 +96,7 @@ In order for the API to function properly, three query parameters are needed:
 - _desiredWidth_: A positive number of pixels that you wish to have for the image width.
 - _desiredHeight_: A positive number of pixels that you wish to have for the image height.
 
-**Here are a few examples of properly formatted URLs:**
+Here are a few examples of properly formatted URLs:
 
 http://localhost:1987/api/v1/processimage?imageName=fjord&desiredWidth=900&desiredHeight=700
 
