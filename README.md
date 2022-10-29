@@ -150,7 +150,6 @@ A number of **colored CLI notifications** were made for **the purpose of ease-of
 
 ![outcome of using a wrong imageName parameter](./assets/docs/wrong-imageName-parameter-api-error.PNG "outcome of using a wrong imageName parameter")
 
-
 ### #missing desiredWidth parameter
 
 **Example URL:** http://localhost:1987/api/v1/processimage?imageName=santamonica&desiredHeight=700
@@ -231,8 +230,10 @@ A number of **colored CLI notifications** were made for **the purpose of ease-of
 
 ![a red-colored notification is displayed to inform the user that he had already processed all the images in the `full` folder with these same dimensions before](./assets/docs/red2-notification-api-call.PNG "a red-colored notification is displayed to inform the user that he had already processed all the images in the `full` folder with these same dimensions before")
 
-
+----------
 ## Remarks
+----------
+
 - Once the server starts running, and a call is made to the API using the proper formatting, as stated above, a logger file titled **`loggerFile.txt` will be created under `assets/`**, and will remain there even after the server is down. This file is designed to persist on desk for the lifetime of the API to continually store details of the functioning as well as usage of the API. If deleted by any change, once the server received a new API call, it will be re-created again. The previously stored data is gone nontheless, and this newly created logger fille will serve as a fresh start.
 
 - If the `thumb` folder is NOT available when downloading the project, it is automatically created upon the first call to the API.
