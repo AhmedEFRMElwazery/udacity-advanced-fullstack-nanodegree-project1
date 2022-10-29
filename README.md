@@ -225,7 +225,7 @@ A number of **colored CLI notifications** were made for **the purpose of ease-of
 
 **Outcome (shown in browser):** A cached version, that was loaded from the `thumb` folder, of the last alpha-numerically listed image is displayed. In this case, since the image titled "santamonica" is staring with an "s" (hence it is the last image in the folder from an alphabetical point of view), it is the one displayed.
 
-![the image titled 'santamonica' is staring with an 's', hence it is the last image in the folder from an alphabetical point of view, it is the one displayed](./assets/docs/trying-to-recreate-all-processed-image.PNG "the image titled 'santamonica' is staring with an 's', hence it is the last image in the folder from an alphabetical point of view, it is the one displayed")
+![the image titled santamonica is staring with an s character, hence it is the last image in the folder from an alphabetical point of view, it is the one displayed](./assets/docs/trying-to-recreate-all-processed-image.PNG "the image titled santamonica is staring with an s character, hence it is the last image in the folder from an alphabetical point of view, it is the one displayed")
 
 
 **Outcome (shown in CLI):** A red-colored notification is displayed in the CLI, as explained in the [Notifications](#Notifications) section.
