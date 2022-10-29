@@ -23,7 +23,7 @@
 
 
 -----------------------
-## PackageJson-![image](https://user-images.githubusercontent.com/91789961/198853622-62354a86-7e37-4660-bfcf-4b0d6084e7e3.png)
+## Package-dot-json-scripts
 -----------------------
 
 - **```npm install```**: This is the first script to run in order to install all the dependencies and devDependencies needed for the project to function properly. 
