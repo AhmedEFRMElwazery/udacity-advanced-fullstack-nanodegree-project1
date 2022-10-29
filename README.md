@@ -19,7 +19,7 @@
 * [Endpoint](#Endpoint)
 * [Notifications](#Notifications)
 * [Error-Handling](#Error-Handling)
-* [Notice!](#Notice!)
+* [Notice](#Notice)
 
 
 -----------------------
@@ -52,7 +52,7 @@
 
 - **```npm run jasmine```**: will condict unit testing using the jasmine testing framework. The testing result will be displayed in the console.
 
-**Screenshot - the result of running `jasmine` script: PLEASE NOTE that the highlighted segments appearing in magenta, green and red are NOT error messages. They are colored notifications. This is further explain in BOTH the [Notifications](#Notifications) and the [Notice!](#Notice!) sections**
+**Screenshot - the result of running `jasmine` script: PLEASE NOTE that the highlighted segments appearing in magenta, green and red are NOT error messages. They are colored notifications. This is further explain in BOTH the [Notifications](#Notifications) and the [Notice](#Notice) sections**
 
 ![outcome of running jasmine script](./assets/docs/jasmine-script-running-result1.png "outcome of running jasmine script")
 
@@ -232,7 +232,7 @@ A number of colored CLI notification were made for **the purpose of ease-of-use 
 ![a red-colored notification is displayed to inform the user that he had already processed all the images in the `full` folder with these same dimensions before](./assets/docs/red2-notification-api-call.PNG "a red-colored notification is displayed to inform the user that he had already processed all the images in the `full` folder with these same dimensions before")
 
 
-## Notice!
+## Notice
 - Once the server starts running, and a call is made to the API using the proper formatting, as stated abovem, a logger file titled **`loggerFile.txt` will be created under `assets/`**, and will remain there even after the server is down. This file is designed to persist on desk for the lifetime of the API to continually store details of the functioning as well as usage of the API. If deleted by any change, once the server received a new API call, it will be re-created again. The previously stored data is gone nontheless, and this newly created logger fille will serve as a fresh start.
 
 - If the `thumb` folder is NOT available when downloading the project, it is automatically created upon the first call to the API.
