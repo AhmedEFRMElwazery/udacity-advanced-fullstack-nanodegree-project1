@@ -233,7 +233,7 @@ A number of **colored CLI notifications** were made for **the purpose of ease-of
 
 
 ## Remarks
-- Once the server starts running, and a call is made to the API using the proper formatting, as stated abovem, a logger file titled **`loggerFile.txt` will be created under `assets/`**, and will remain there even after the server is down. This file is designed to persist on desk for the lifetime of the API to continually store details of the functioning as well as usage of the API. If deleted by any change, once the server received a new API call, it will be re-created again. The previously stored data is gone nontheless, and this newly created logger fille will serve as a fresh start.
+- Once the server starts running, and a call is made to the API using the proper formatting, as stated above, a logger file titled **`loggerFile.txt` will be created under `assets/`**, and will remain there even after the server is down. This file is designed to persist on desk for the lifetime of the API to continually store details of the functioning as well as usage of the API. If deleted by any change, once the server received a new API call, it will be re-created again. The previously stored data is gone nontheless, and this newly created logger fille will serve as a fresh start.
 
 - If the `thumb` folder is NOT available when downloading the project, it is automatically created upon the first call to the API.
 
