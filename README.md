@@ -196,7 +196,7 @@ A number of **colored CLI notifications** were made for **the purpose of ease-of
 ![outcome of using a wrong desiredHeight parameter](./assets/docs/wrong-desiredHeight-parameter-api-error2.PNG "outcome of using a wrong desiredHeight parameter")
 
 
-### #missing BOTH the desiredHeight and desiredHeight parameter
+### #missing BOTH the desiredWidth and desiredHeight parameter
 
 **Example URL:** http://localhost:1987/api/v1/processimage?imageName=fjord
 
