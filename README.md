@@ -14,7 +14,7 @@
 *author*: **Ahmed E. F. R. Mohammed**
 
 
-* [Package.json-scripts](#Package.json-scripts)
+* [Package-dot-json-scripts](#Package-dot-json-scripts)
 * [Proper-use](#Proper-use)
 * [Endpoint](#Endpoint)
 * [Notifications](#Notifications)
@@ -23,7 +23,7 @@
 
 
 -----------------------
-## Package.json-scripts
+## PackageJson-![image](https://user-images.githubusercontent.com/91789961/198853622-62354a86-7e37-4660-bfcf-4b0d6084e7e3.png)
 -----------------------
 
 - **```npm install```**: This is the first script to run in order to install all the dependencies and devDependencies needed for the project to function properly. 
@@ -76,7 +76,7 @@
 ## Proper-use
 -------------
 
-Once your start the server, it will be listening on port 1987. Once you visit the 'http://localhost:1987/', you will be greeting with a landing page that serves as a guideline on how to use the API and its features, as demonstrated below:
+Once your start the server, it will be listening on port 1987. Once you visit http://localhost:1987/, you will be greeting with a landing page that serves as a guideline on how to use the API and its features, as demonstrated below:
 
 ![Landing Page](./assets/docs/API-landingPage.png "The Image Processing API landing page")
 
@@ -264,6 +264,6 @@ A number of **colored CLI notifications** were made for **the purpose of ease-of
 
     - A test was made in the `tests/modules/processImageWithSharp.moduleSpec` to test whether a processed image exists or not, and it was successful (hence the red notification...For further understanding, read the [Notifications](#Notifications) section above).
 
-  - Please note that the number of colored notification appearing during the jasmine testing depends on how many API calls were made, and how many images were created **prior** to running the jasmine testing. Those **7 messages/notifications** are the ones that will appear if you're starting on a clean slate, with no prior operations made, API called, or images processed and resized. In other words, those **7 messages/notifications** will appear if you start by running the scripts one by one as described above in the [Package.json-scripts](#Package.json-scripts) section.
+  - Please note that the number of colored notification appearing during the jasmine testing depends on how many API calls were made, and how many images were created **prior** to running the jasmine testing. Those **7 messages/notifications** are the ones that will appear if you're starting on a clean slate, with no prior operations made, API called, or images processed and resized. In other words, those **7 messages/notifications** will appear if you start by running the scripts one by one as described above in the [Package-dot-json-scripts](#Package-dot-json-scripts) section.
 
 
