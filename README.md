@@ -204,7 +204,7 @@ A number of **colored CLI notifications** were made for **the purpose of ease-of
 
 ![outcome of missing desiredHeight parameter](./assets/docs/missing-desiredWidth-desiredHeightParameters.png "outcome of missing desiredHeight parameter")
 
-### #trying to re-process and already processed image with the same dimensions
+### #trying to re-process an already processed image with the same dimensions AGAIN
 
 **Example URL (run it twice):** http://localhost:1987/api/v1/processimage?imageName=santamonica&desiredWidth=900&desiredHeight=700
 
@@ -218,7 +218,7 @@ A number of **colored CLI notifications** were made for **the purpose of ease-of
 ![trying to recreate a resized image that was previously created and still present in the `thumb` folder results in a red-colored notification in the CLI](./assets/docs/red1-notification-api-call.PNG "trying to recreate a resized image that was previously created and still present in the `thumb` folder results in a red-colored notification in the CLI")
 
 
-### #trying to re-process all the images in the `full` folder with the same dimensions
+### #trying to re-process all the images in the `full` folder with the same dimensions AGAIN
 
 **Example URL (run it twice):** http://localhost:1987/api/v1/processimage?imageName=all&desiredWidth=900&desiredHeight=700
 
