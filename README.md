@@ -102,11 +102,11 @@ Here are a few examples of properly formatted URLs:
 
 http://localhost:1987/api/v1/processimage?imageName=fjord&desiredWidth=900&desiredHeight=700
 
-This will result in creating a resized image of the `fjor` image located in the `assets/images/full`, with a 900 pixels width and 700 pixels height. The processed image will be saved in the `assets/images/thumb`.
+This will result in creating a resized image of the `fjor` image located in the `assets/images/full`, with a `900` pixels width and `700` pixels height. The processed image will be saved in the `assets/images/thumb`.
 
 http://localhost:1987/api/v1/processimage?imageName=all&desiredWidth=600&desiredHeight=900
 
-In this case, the user have used the keyword `all` as entry for the `imageName` parameter. This will result in processing all the images located in the `assets/images/full` to be 600 pixels wide and 900 pixels height. They will all be saved to the `assets/images/thumb`.
+In this case, the user have used the keyword `all` as entry for the `imageName` parameter. This will result in processing all the images located in the `assets/images/full` to be `600` pixels wide and `900` pixels height. They will all be saved to the `assets/images/thumb`.
 
 ----------------
 ## Notifications
