@@ -33,9 +33,9 @@ const middleware = (req: Request, res: Response, next: () => void): void => {
     //write the details to assets/loggerFile.txt
     writeDataToLoggerFile(loggerMessage);
   } else {
-    const loggerMessage = `\nRequest type: ${
-      req.method
-    }, Visited URL: "${req.originalUrl}", User parameters: ${JSON.stringify(
+    const loggerMessage = `\nRequest type: ${req.method}, Visited URL: "${
+      req.originalUrl
+    }", User parameters: ${JSON.stringify(
       //turing the query object into a string.
       req.query
     )}, User IP address: ${req.ip}, Date: ${newDate}, Time: ${newTime}\n`;
