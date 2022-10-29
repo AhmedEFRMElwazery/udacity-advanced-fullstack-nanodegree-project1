@@ -114,7 +114,7 @@ A number of **colored CLI notifications** were made for **the purpose of ease-of
 
 ![overview of all notificaions coloration](./assets/docs/all-notification-api-call.PNG "overview of all notificaions coloration")
 
-- **Magenta notification** is displayed once **_the API receives a call_**. It is displayed in the CLI with details about the nature of the API call: such as the **_request type_**, **_visited url_**, the user **_ip address_**, the **_parameters_** eneterd by the usre, and the **_date and time_** on which the API call was made, as displayed below.
+- **Magenta notification** is displayed once **_the API receives a call_**. It is displayed in the CLI with details about the nature of the API call: such as the _request type_, _visited url_, the user _ip address_, the _parameters_ eneterd by the usre, and the _date and time_ on which the API call was made, as displayed below.
 
 ![api calls result in megenta-colored notification in the CLI](./assets/docs/magenta-notification-api-call.PNG "api calls result in megenta-colored notification in the CLI")
 
